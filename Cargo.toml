@@ -1,0 +1,23 @@
+[package]
+name = "librx52"
+version = "0.1.0"
+authors = ["Terence Noone <me@techtricity.net>"]
+edition = "2021"
+description = "A Rust X52 driver"
+readme = "README.md"
+homepage = "https://techtricity.net/rx52"
+repository = "https://github.com/JetbladeDevsStuff/rx52"
+license = "GPL-3.0-or-later"
+keywords = ["game", "utility", "io", "driver"]
+categories = ["game-development", "hardware-support"]
+
+[dependencies]
+rusb = "0.9.3"
+
+[lib]
+# Stops the outputted library from being called liblibrx52
+name = "rx52"
+
+[[bin]]
+name = "rx52"
+path = "src/bin.rs"
